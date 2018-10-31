@@ -10,12 +10,18 @@
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
-function my_login_logo() { ?>
+function my_login_logo() { 
+  $custom_logo_id = get_theme_mod( 'custom_logo' );
+  $logoImg = wp_get_attachment_image_src($custom_logo_id,'large');
+  $logo_url = ($logoImg) ? $logoImg[0] : '';
+?>
 <style type="text/css">
   body.login div#login h1 a {
-  	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 327px 67px;
-  	width: 327px;
+    <?php if($logo_url) { ?>
+      background-image: url(<?php echo $logo_url; ?>);
+    <?php } ?> 
+  	background-size: contain;
+  	width: 100%;
   	height: 67px;
   }
 </style>
