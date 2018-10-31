@@ -126,3 +126,47 @@ function ii_custom_taxonomies() {
         }
     }
 }
+
+
+// Add the custom columns to the position post type:
+add_filter( 'manage_posts_columns', 'set_custom_cpt_columns' );
+function set_custom_cpt_columns($columns) {
+    global $wp_query;
+    $query = isset($wp_query->query) ? $wp_query->query : '';
+    $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
+    
+    if($post_type=='slide') {
+        unset( $columns['date'] );
+        $columns['image'] = __( 'Image', 'acstarter' );
+        $columns['date'] = __( 'Date', 'acstarter' );
+    }
+    
+    return $columns;
+}
+
+// Add the data to the custom columns for the book post type:
+add_action( 'manage_posts_custom_column' , 'custom_post_column', 10, 2 );
+function custom_post_column( $column, $post_id ) {
+    global $wp_query;
+    $query = isset($wp_query->query) ? $wp_query->query : '';
+    $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
+    
+    if($post_type=='slide') {
+        switch ( $column ) {
+            case 'image' :
+                //$img = get_field('team_individual_image',$post_id);
+                $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+                $img = wp_get_attachment_image_src($post_thumbnail_id,'large');
+                $img_src = ($img) ? $img[0] : '';
+                $the_photo = '<span class="tmphoto" style="display:inline-block;width:70px;height:50px;background:#e2e1e1;text-align:center;">';
+                if($img_src) { 
+                     $the_photo .= '<span class="ft-image" style="background-image:url('.$img_src.');background-size:cover;background-position:center center;width:100%;height:100%;display:block;"></span>';
+                } else {
+                    $the_photo .= '<i class="dashicons dashicons-businessman" style="font-size:33px;position:relative;top:8px;left:-6px;opacity:0.3;"></i>';
+                }
+                $the_photo .= '</span>';
+                echo $the_photo;
+        }
+    }
+    
+}

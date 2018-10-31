@@ -1823,6 +1823,9 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .plus-minus-toggle:after{-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center}
 .plus-minus-toggle.collapsed:after{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}
 .plus-minus-toggle.collapsed:before{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
+.slides-wrapper{position:relative}
+.slides-wrapper .slide{width:100%}
+.slides-wrapper .slide img{width:100%;height:auto}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
