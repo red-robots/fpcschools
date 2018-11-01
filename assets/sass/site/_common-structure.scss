@@ -25,12 +25,12 @@ div {
 .wrapper {
 	width: 100%;
 	margin: 0px auto;
-	padding: 0 20px;
+	padding: 0 30px;
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		 max-width: 1600px;
+		 max-width: 1300px;
 		padding:0 40px;
 	}
 }
@@ -122,6 +122,6 @@ div {
 body {
     font-family: $font__main;
     color:$color-dark-blue;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.3;
 }

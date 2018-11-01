@@ -49,7 +49,10 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('.flexslider').flexslider({
-		animation: "slide",
+		animation: "fade",
+        easing: "swing",
+        slideshowSpeed: 8000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+        animationSpeed: 700,  
 	}); // end register flexslider
 	
 	/*
@@ -63,20 +66,6 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 	
-	/*
-	*
-	*	Isotope with Images Loaded
-	*
-	------------------------------------*/
-	var $container = $('#container').imagesLoaded( function() {
-  	$container.isotope({
-    // options
-	 itemSelector: '.item',
-		  masonry: {
-			gutter: 15
-			}
- 		 });
-	});
 
 	/*
 	*
@@ -90,22 +79,6 @@ jQuery(document).ready(function ($) {
 	    return false;
 	});
 
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
-	
-	
-	/*
-	*
-	*	Equal Heights Divs
-	*
-	------------------------------------*/
-	$('.js-blocks').matchHeight();
 
 	/*
 	*
