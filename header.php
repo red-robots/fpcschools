@@ -41,18 +41,15 @@ wp_head();
 	            	<a href="<?php bloginfo('url'); ?>">
 		            	<img src="<?php echo $logoImg[0]; ?>" alt="<?php bloginfo('name'); ?>">
 		            </a>
-                    <span class="logoname">
-                        <?php echo $logo_name; ?>
-                    </span>
 	            </div>
 	        <?php } else { ?>
 	            <h1 class="logo">
 		            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
 	            </h1>
 	        <?php } ?>
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'fpcschools' ); ?></button>
+            
+            <span class="burger" id="mobile-menu"><span></span></span>
+            <nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="navwrap clear"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?></div>
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->

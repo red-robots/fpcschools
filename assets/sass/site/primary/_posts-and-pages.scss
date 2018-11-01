@@ -344,11 +344,12 @@
             width: 50%;
         }
     }
+    
     .inline {
         display: inline-block;
     }
     .logodiv {
-        max-width: 225px;
+        max-width: 220px;
         width: 100%;
         margin-bottom: 15px;
         img {
@@ -357,7 +358,7 @@
         }
     }
     .imageCol {
-        min-height: 225px;
+        min-height: 220px;
     }
     
     .schoolname {
@@ -371,10 +372,6 @@
         color:#FFF;
         border-radius: 10px;
         text-decoration: none;
-        @include transition(all ease-out .2s);
-        &:hover {
-            background: $color-orange;
-        }
     }
     .list-wrapper {
         margin-top: 30px;
@@ -477,4 +474,18 @@
     background: $color-orange;
     height: 60px;
     margin-top: 20px;
+}
+
+.error-404 {
+    margin-top: 12%;
+    text-align: center;
+    h1 {
+        margin: 0 0 10px;
+        font-family: $font-heading;
+        font-size: 30px;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
 }

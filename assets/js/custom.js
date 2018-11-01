@@ -78,6 +78,11 @@ jQuery(document).ready(function ($) {
 	    }, 500);
 	    return false;
 	});
+    
+    $("#mobile-menu").on("click",function(){
+        $('#site-navigation').toggleClass('toggled');
+        $('body').toggleClass('mobile-menu-open');
+    });
 
 
 	/*
