@@ -68,3 +68,9 @@ require get_template_directory() . '/inc/block-all-registration-and-comments.php
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function get_post_id_by_slug($slug) {
+    global $wpdb;
+    $row = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}posts WHERE post_name='".$slug."' AND post_status='publish'", OBJECT );
+    return ($row) ? $row->ID : 0;
+}

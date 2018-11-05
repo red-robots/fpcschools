@@ -1,18 +1,23 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package fpcschools
- */
-
-get_header(); ?>
+global $post;
+$post_id = (isset($post->ID)) ? $post->ID : 0;
+$is_sub_site = false;
+if( $postInfo = get_post($post_id) ) {
+    $parent_id = $postInfo->post_parent;
+    if($parent_id>0) {
+        $parent_post = get_post($parent_id);
+        if($parent_post) {
+            if( $parent_school = get_field('school_logo',$parent_id) ) {
+                $is_sub_site = true;
+            }
+        }
+    }
+}
+if($is_sub_site) {
+    get_template_part( 'header_subsite');
+} else {
+    get_header();   
+} ?>
 
 	<div id="primary" class="content-area full clear">
 		<main id="main" class="site-main wrapper" role="main">

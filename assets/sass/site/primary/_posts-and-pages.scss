@@ -201,6 +201,10 @@
 }
 .text-column.half {
     float: left;
+    margin-bottom: .5em;
+    @media screen and (min-width: $tabwidth) {
+        margin-bottom: 0;
+    }
 }
 .image-column {
     float: left;
@@ -290,11 +294,17 @@
         text-transform: uppercase;
         text-align: center;
         font-family: $font-heading;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 300;
+        @media screen and (min-width: $tabwidth) {
+            font-size: 35px;
+        }
     }
     .titlewrap {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
+        @media screen and (min-width: $tabwidth) {
+            margin-bottom: 60px;
+        }
     }
     .text-column p {
         margin-top: 0;
@@ -488,4 +498,119 @@
         margin-top: 0;
         margin-bottom: 1.5em;
     }
+}
+
+.titlewrap.ss_titlediv {
+    .section-title {
+        margin-top: 0;
+        hyphens: none;
+        text-align: left;
+        color:$color-light-blue;
+        @media screen and (min-width: $tabwidth) {
+            position: relative;
+            top: -4px;
+        }
+    }
+}
+.text-column.ss_textcolumn {
+    @media screen and (min-width: $tabwidth) {
+        width: 58%;
+    }
+}
+.image-column.ss_image_column {
+    @media screen and (min-width: $tabwidth) {
+        width: 38%;
+    }
+}
+
+.section.pattern-blue {
+    background-image:url('images/school_pattern.png');
+    background-position: center center;
+    background-repeat: repeat;
+    background-color:$color-light-blue;
+    background-size: 200%;
+    color:#FFF;
+    @media screen and (min-width: $tabwidth) {
+        background-size: 100%;
+    }
+    .section-title {
+        color: #FFF;
+        text-align: center;
+        text-transform: none;
+        font-size: 30px;
+    }
+    .textwrap {
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+            @media screen and (min-width: $tabwidth) {
+                margin-left: -25px;
+                margin-right: -25px;
+            }
+        }
+    }
+    .sbox {
+        width: 50%;
+        float: left;
+        margin-bottom: 40px;
+        @media screen and (min-width: $tabwidth) {
+            width: 25%;
+            margin-bottom: 0;
+        }
+        .pad {
+            padding-left: 10px;
+            padding-right: 10px;
+            @media screen and (min-width: $tabwidth) {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+    }
+    .sbox_image {
+        position: relative;
+        background: $color-green;
+        width: 100%;
+        margin-bottom: 15px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+            float: left;
+            @include transition(all ease-out 0.4s);
+        }
+        a {
+            display: block;
+            cursor: pointer;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .sbox_title {
+        text-align: center;
+        font-weight: 600;
+        .title {
+            hyphens: none;
+        }
+        .title i {
+            display: inline-block;
+            border-bottom: 1px solid #FFF;
+        }
+        a {
+            text-decoration: none;
+            color: #FFF;
+        }
+    }
+}
+
+body.weekday-school .site-footer {
+    margin-top: 0;
+    background: $color-green;
+}
+
+body.child-development-center .site-footer {
+    margin-top: 0;
+    background: $color-green;
 }

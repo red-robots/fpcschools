@@ -35,10 +35,12 @@
         overflow: visible;
         opacity: 1;
         .navwrap {
-            background: rgba(255,255,255,.96);
+            background: rgba(255,255,255,1);
             box-shadow: 0px 6px 9px 0px rgba(0,0,0,0.14);
             margin-bottom: 100px;
             padding-bottom: 20px;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
     }
     
@@ -293,4 +295,85 @@ button.menu-toggle {
 }
 .mobile-menu-open .burger span:after {
     @include transform( translateY(-9px) rotate(-45deg) );
+}
+
+body.weekday-school {
+    .burger span,
+    .burger span:before, 
+    .burger span:after {
+        background-color: $color-green;
+    }
+}
+
+body.child-development-center {
+    .burger span,
+    .burger span:before, 
+    .burger span:after {
+        background-color: $color-light-blue;
+    }
+}
+
+body.child-development-center.mobile-menu-open .burger span,
+body.weekday-school.mobile-menu-open .burger span {
+    background-color: transparent;
+}
+
+body.weekday-school .main-navigation {
+    a {
+        color: $color-light-blue;
+    }
+    
+    a:hover {
+        color: $color-green;
+    }
+    
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a,
+    .current-menu-ancestor > a {
+        background: $color-green;
+        color: #FFF;
+    }
+   
+    @media screen and (min-width: $tabwidth) {
+        width: 70%;
+        ul.menu {
+            text-align: right;
+        }
+        ul.menu > li {
+            display: inline-block;
+            float: none;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+body.child-development-center .main-navigation {
+    a {
+        color: $color-light-blue;
+    }
+    
+    a:hover {
+        color: $color-green;
+    }
+    
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a,
+    .current-menu-ancestor > a {
+        background: $color-light-blue;
+        color: #FFF;
+    }
+   
+    @media screen and (min-width: $tabwidth) {
+        width: 80%;
+        ul.menu {
+            text-align: right;
+        }
+        ul.menu > li {
+            display: inline-block;
+            float: none;
+            margin-bottom: 3px;
+        }
+    }
 }
