@@ -14,18 +14,19 @@ function my_login_logo() {
   $custom_logo_id = get_theme_mod( 'custom_logo' );
   $logoImg = wp_get_attachment_image_src($custom_logo_id,'large');
   $logo_url = ($logoImg) ? $logoImg[0] : '';
-?>
-<style type="text/css">
-  body.login div#login h1 a {
-    <?php if($logo_url) { ?>
-      background-image: url(<?php echo $logo_url; ?>);
-    <?php } ?> 
-  	background-size: contain;
-  	width: 100%;
-  	height: 67px;
-  }
-</style>
+  if($custom_logo_id) { ?>
+  <style type="text/css">
+    body.login div#login h1 a {
+      <?php if($logo_url) { ?>
+        background-image: url(<?php echo $logo_url; ?>);
+      <?php } ?> 
+    	background-size: contain;
+    	width: 100%;
+    	height: 67px;
+    }
+  </style>
 <?php }
+}
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Change Link
