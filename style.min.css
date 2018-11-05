@@ -1940,7 +1940,8 @@ body.child-development-center .logo{position:absolute;top:0;left:20px;width:170p
 }.section.section4 .bottomCol:first-child{margin-top:0}
 .section.section4 .photowrap{margin-bottom:15px}
 .section.section4 .frame{display:inline-block;height:250px;width:250px;overflow:hidden;border-radius:600px}
-.section.section4 .frame img{width:100%;height:auto}
+.section.section4 .frame img{width:100%;height:auto;-webkit-transition:all ease-out .4s;transition:all ease-out .4s}
+.section.section4 .frame:hover img{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 .section.section4 .bottom-title{font-family:"Delius",cursive;font-size:30px;line-height:1.1;color:#dd731d}
 .section.section4 .bottom-title a{text-decoration:none;color:#dd731d}
 .section.section4 .bottom-title span{color:#05264d}
