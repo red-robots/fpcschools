@@ -6,17 +6,7 @@
  *
  * @package fpcschools
  */
-$url      = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$validURL = str_replace("&", "&amp", $url);
-$schools = array('weekday-school','child-development-center');
-$parts = explode('/',$validURL);
-$is_sub_site = '';
-foreach($parts as $p) {
-    if( in_array($p,$schools) ) {
-        $is_sub_site = $p;
-        break;
-    }
-}
+$is_sub_site = get_school_type_uri();
 if($is_sub_site) {
     get_template_part( 'header_subsite');
 } else {

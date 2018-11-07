@@ -4,13 +4,6 @@
 <?php 
 get_template_part('inc/header_meta');
 $is_sub_site_ii = get_school_type_uri();
-foreach($parts as $p) {
-    if( in_array($p,$schools) ) {
-        $is_sub_site_ii = $p;
-        break;
-    }
-}
-    
     
 global $post;
 $is_home = ( is_home() || is_front_page() ) ? true:false;
