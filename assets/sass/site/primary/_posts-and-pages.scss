@@ -111,8 +111,14 @@
     max-height: 470px;
     overflow: hidden;
     background: $color-light-orange;
-    ul.slides {
+    ul.slides,
+    ul.slides .slide {
+        float: left;
         height: 100%;
+        width: 100%;
+        list-style: none;
+        margin: 0 0;
+        padding: 0 0;
     }
     .slide {
         width: 100%;
@@ -121,6 +127,7 @@
         img {
             width: 100%;
             height: auto;
+            float: left;
         }
         .caption {
             position: absolute;
@@ -609,12 +616,124 @@
     }
 }
 
-body.weekday-school .site-footer {
-    margin-top: 0;
-    background: $color-green;
+.interior-info.wrapper {
+    padding-bottom: 50px;
+    position: relative;
+}
+.section-title-wrap {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+.page-title {
+    margin: 0 0;
+    padding: 0 0;
+    text-transform: uppercase;
+    color:$color-light-blue;
+    font-family: $font-heading;
+    font-weight: 500;
+    font-size: 35px;
+}
+.interior.entry {
+    padding-top: 60px;
+    padding-bottom: 0;
+    .title {
+        margin: 0 0 15px;
+        font-family: $font-heading;
+        font-weight: 500;
+        font-size: 25px;
+        text-transform: uppercase;
+        color:$color-light-blue;
+    }
+    .copy {
+        hyphens: none;
+        p {
+            margin-top: 0;
+            margin-bottom: 1.5em;
+        }
+    }
+    .textwrap.half {
+        width: 100%;
+        float: left;
+        @media screen and (min-width: $tabwidth) {
+            width: 62%;
+        }
+    }
+    .textwrap ul {
+        margin: 0 0 20px 20px;
+        padding: 0 0;
+        list-style: none;
+    }
+    .textwrap li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 1.5em;
+        line-height: 1.4;
+        &:before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            background: $color-orange;
+            position: absolute;
+            top:8px;
+            left: 0;
+        }
+    }
+    .imagecol {
+        width: 100%;
+        float: left;
+        @media screen and (min-width: $tabwidth) {
+            width: 36%;
+            float: right;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
-body.child-development-center .site-footer {
-    margin-top: 0;
-    background: $color-green;
+body.scroll-up {
+    .site-content {
+        padding-top: 100px;
+    }
+    #masthead,
+    #interiornav {
+        @include transition(all ease-out .3s);
+    }
+    
+    #masthead,
+    #interiornav {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        z-index: 100;
+    }
+    #masthead {
+        height: 77px;
+        .wrapper {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    #interiornav {
+        top: 77px;
+        z-index: 100;
+    }
+    &.wds .logo {
+        width: 20%;
+    }
+    &.cdc .logo {
+        width: 13%;
+    }
+    &.cdc .main-navigation,
+    &.wds .main-navigation {
+        width: 100%;
+        @media screen and (min-width: $tabwidth) {
+            width: 80%;
+        }
+    }
+    
 }

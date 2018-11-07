@@ -20,6 +20,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<a href="#" class="scrollup"><span><i class="fa fa-chevron-up"></i></span></a></a>
 <?php wp_footer(); ?>
 
 </body>

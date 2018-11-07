@@ -74,3 +74,28 @@ function get_post_id_by_slug($slug) {
     $row = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}posts WHERE post_name='".$slug."' AND post_status='publish'", OBJECT );
     return ($row) ? $row->ID : 0;
 }
+
+function get_school_type_uri($type=null) {
+    $url      = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $validURL = str_replace("&", "&amp", $url);
+    //$schools = array('weekday-school','child-development-center');
+    $schools = array('wds'=>'weekday-school','cdc'=>'child-development-center');
+    $parts = explode('/',$validURL);
+    $school_slug = '';
+    $arrs = array();
+    foreach($parts as $p) {
+        foreach($schools as $k=>$sc) {
+            if($p==$sc) {
+                $arrs[$k]=$sc;                
+            }
+        }
+    }
+    
+    if($type) {
+        if( $type=='key' ) {
+            return key($arrs);
+        }
+    } else {
+        return end($arrs);
+    }
+}

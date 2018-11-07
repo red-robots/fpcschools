@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
-<script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 <?php 
-    
-$url      = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$validURL = str_replace("&", "&amp", $url);
-$schools = array('weekday-school','child-development-center');
-$parts = explode('/',$validURL);
-$is_sub_site_ii = '';
+get_template_part('inc/header_meta');
+$is_sub_site_ii = get_school_type_uri();
 foreach($parts as $p) {
     if( in_array($p,$schools) ) {
         $is_sub_site_ii = $p;
@@ -55,10 +44,9 @@ if( $postInfo = get_post($post_id) ) {
         $sub_site_url = get_permalink($post_id);
     }
 }
-    
 
-    
-$classes = array($home_class,$sub_site_class);
+$school_type = get_school_type_uri('key');
+$classes = array($home_class,$sub_site_class,$school_type);
 wp_head(); 
 ?>
 </head>

@@ -66,25 +66,86 @@ jQuery(document).ready(function ($) {
 		height: '80%'
 	});
 	
-
-	/*
-	*
-	*	Smooth Scroll to Anchor
-	*
+    
+    var times_clicked = 0;
+    
+    /* Smooth Scroll to Up
 	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+            $('body').addClass('scroll-up');
+        } else {
+            $('.scrollup').fadeOut();
+            $('body').removeClass('scroll-up');
+            if(times_clicked>0) {
+                times_clicked = 0;
+            }
+        }
+    }); 
+    
+    $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+    
+    
+    /* Smooth Scroll to Anchor
+	------------------------------------*/
+    
+    //Executed on page load with URL containing an anchor tag.
+    if($(location.href.split("#")[1])) {
+          var target = $('#'+location.href.split("#")[1]);
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 125 //offset height of header here too.
+            }, 1000);
+            return false;
+          }
+    }
+    
+    $('a[href*=#]:not([href=#])').click(function() {
+        times_clicked += 1;
+        
+        if ( $('#interiornav').length> 0 ) {
+            $('#interiornav').toggleClass('nav-open');
+            $('.active-area').text( $(this).text() );
+        }
+        
+        
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            && location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+              
+            if(times_clicked==1) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top - 195 //offsets for fixed header
+                }, 1000);
+            } else {
+                $('html,body').animate({
+                  scrollTop: target.offset().top - 125 //offsets for fixed header
+                }, 1000);
+            }
+            
+            return false;
+            
+          }
+        }
+    });
     
     $("#mobile-menu").on("click",function(){
         $('#site-navigation').toggleClass('toggled');
         $('body').toggleClass('mobile-menu-open');
     });
 
-
+    $('body').on('click','#subnavMobile',function(e){
+        e.preventDefault();
+        $('#interiornav').toggleClass('nav-open');
+    });
+    
 	/*
 	*
 	*	Wow Animation
@@ -93,3 +154,4 @@ jQuery(document).ready(function ($) {
 	new WOW().init();
 
 });// END #####################################    END
+

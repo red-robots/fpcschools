@@ -12,14 +12,8 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
-<script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 <?php 
+get_template_part('inc/header_meta');
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logoImg = wp_get_attachment_image_src($custom_logo_id,'large');
 $logo_name = get_field('logo_name','option');

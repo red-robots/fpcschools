@@ -1,5 +1,14 @@
 <?php
-global $post;
+$school_type = get_school_type_uri('key');
+$segment = get_school_type_uri();
+$school_parent_id = get_post_id_by_slug($segment);
+foreach($parts as $p) {
+    if( in_array($p,$schools) ) {
+        $is_sub_site_ii = $p;
+        break;
+    }
+}
+global $post, $wp_query;
 $post_id = (isset($post->ID)) ? $post->ID : 0;
 $is_sub_site = false;
 if( $postInfo = get_post($post_id) ) {
@@ -13,30 +22,33 @@ if( $postInfo = get_post($post_id) ) {
         }
     }
 }
-if($is_sub_site) {
+if($school_type) {
     get_template_part( 'header_subsite');
 } else {
     get_header();   
-} ?>
+} 
 
-	<div id="primary" class="content-area full clear">
-		<main id="main" class="site-main wrapper" role="main">
-            
-			<?php
-			while ( have_posts() ) : the_post();
+if($school_type) {
+get_template_part('inc/banner_subsite'); 
+get_template_part('page-interior'); ?>
+<?php } else { ?>
 
-				get_template_part( 'template-parts/content', 'page' );
+    <div id="primary" class="content-area full clear">
+        <main id="main" class="site-main wrapper" role="main">
+            <?php
+            while ( have_posts() ) : the_post();
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+                get_template_part( 'template-parts/content', 'page' );
 
-			endwhile; // End of the loop.
-			?>
+                // If comments are open or we have at least one comment, load up the comment template.
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+            endwhile; // End of the loop.
+            ?>
+        </main>
+    </div>
+<?php } ?>
 <?php
 get_footer();
