@@ -2,12 +2,7 @@
 $school_type = get_school_type_uri('key');
 $segment = get_school_type_uri();
 $school_parent_id = get_post_id_by_slug($segment);
-foreach($parts as $p) {
-    if( in_array($p,$schools) ) {
-        $is_sub_site_ii = $p;
-        break;
-    }
-}
+$is_sub_site_ii = get_school_type_uri();
 global $post, $wp_query;
 $post_id = (isset($post->ID)) ? $post->ID : 0;
 $is_sub_site = false;
