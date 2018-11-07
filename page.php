@@ -5,18 +5,7 @@ $school_parent_id = get_post_id_by_slug($segment);
 $is_sub_site_ii = get_school_type_uri();
 global $post, $wp_query;
 $post_id = (isset($post->ID)) ? $post->ID : 0;
-$is_sub_site = false;
-if( $postInfo = get_post($post_id) ) {
-    $parent_id = $postInfo->post_parent;
-    if($parent_id>0) {
-        $parent_post = get_post($parent_id);
-        if($parent_post) {
-            if( $parent_school = get_field('school_logo',$parent_id) ) {
-                $is_sub_site = true;
-            }
-        }
-    }
-}
+
 if($school_type) {
     get_template_part( 'header_subsite');
 } else {
