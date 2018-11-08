@@ -12,8 +12,8 @@ if($school_type) {
     get_header();   
 } 
 
+//get_template_part('inc/banner_subsite'); 
 if($school_type) {
-get_template_part('inc/banner_subsite'); 
 get_template_part('page-interior'); ?>
 <?php } else { ?>
 

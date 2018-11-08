@@ -48,9 +48,7 @@ wp_head();
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
-    
-    <?php if($is_home) { 
-        get_template_part('inc/banner');
-    } ?>
+
+	<?php get_template_part('inc/banner_subsite'); ?>
 
 	<div id="content" class="site-content clear">

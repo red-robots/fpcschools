@@ -2,15 +2,15 @@
 /* Custom Post Types */
 add_action('init', 'js_custom_init');
 function js_custom_init()  {
+    // array(
+    //     'post_type' => 'slide',
+    //     'menu_name' => 'Slides',
+    //     'plural'    => 'Slides',
+    //     'single'    => 'Slide',
+    //     'menu_icon' => 'dashicons-format-gallery',
+    //     'supports'  => array('title','editor','thumbnail')
+    // ),
     $post_types = array(
-        array(
-            'post_type' => 'slide',
-            'menu_name' => 'Slides',
-            'plural'    => 'Slides',
-            'single'    => 'Slide',
-            'menu_icon' => 'dashicons-format-gallery',
-            'supports'  => array('title','editor','thumbnail')
-        ),
         array(
             'post_type' => 'testimonial',
             'menu_name' => 'Testimonials',
