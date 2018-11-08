@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="wrapper">
-			
+			<?php wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_id' => 'footer-menu' ) ); ?> 
 	   </div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

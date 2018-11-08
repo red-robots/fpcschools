@@ -71,18 +71,22 @@ jQuery(document).ready(function ($) {
     
     /* Smooth Scroll to Up
 	------------------------------------*/
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100) {
-            $('.scrollup').fadeIn();
-            $('body').addClass('scroll-up');
-        } else {
-            $('.scrollup').fadeOut();
-            $('body').removeClass('scroll-up');
-            if(times_clicked>0) {
-                times_clicked = 0;
+    
+    if( $('#int_menu').length > 0 ) {
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 ) {
+                $('.scrollup').fadeIn();
+                $('body').addClass('scroll-up');
+            } else {
+                $('.scrollup').fadeOut();
+                $('body').removeClass('scroll-up');
+                if(times_clicked>0) {
+                    times_clicked = 0;
+                }
             }
-        }
-    }); 
+        }); 
+    }
+
     
     $('.scrollup').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);

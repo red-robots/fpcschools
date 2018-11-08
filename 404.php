@@ -18,14 +18,15 @@ if($is_sub_site) {
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'fpcschools' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'acstarter' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'fpcschools' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below.', 'acstarter' ); ?></p>
 				</div><!-- .page-content -->
+                <?php get_template_part( 'template-parts/content', 'sitemap' ); ?>
 			</section><!-- .error-404 -->
-
+            
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
