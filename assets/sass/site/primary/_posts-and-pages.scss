@@ -21,7 +21,9 @@
 .entry-summary {
 	margin: 0 0 1.5em;
 }
-
+.subpage #content {
+    min-height: 30em;
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;

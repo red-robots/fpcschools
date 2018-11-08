@@ -1887,6 +1887,7 @@ body.cdc .site-footer{margin-top:0;background:#198bbd}
 .byline,.updated:not(.published){display:none}
 .single .byline,.group-blog .byline{display:inline}
 .page-content,.entry-content,.entry-summary{margin:0 0 1.5em}
+.subpage #content{min-height:30em}
 .page-links{clear:both;margin:0 0 1.5em}
 .faqrow{width:auto;overflow:hidden;margin:0 0 20px 0;background-color:rgba(255,255,255,0.05);border-radius:10px}
 .question{width:auto;float:left;margin:10px;font-weight:bold;font-size:20px;cursor:pointer;line-height:1.3;position:relative;padding:0 0 0 20px}
