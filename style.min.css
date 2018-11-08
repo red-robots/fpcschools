@@ -2132,7 +2132,8 @@ body.scroll-up.wds .logo{width:20%}
 body.scroll-up.cdc .logo{width:13%}
 body.scroll-up.cdc .main-navigation,body.scroll-up.wds .main-navigation{width:100%}
 @media screen and (min-width:780px){body.scroll-up.cdc .main-navigation,body.scroll-up.wds .main-navigation{width:80%}
-}body.wds .testimonial-post .pad{background:#7abb69}
+}body.scroll-up.logged-in #interiornav{top:107px}
+body.wds .testimonial-post .pad{background:#7abb69}
 body.cdc .testimonial-post .pad{background:#198bbd}
 .testimonial .section-title-wrap{margin-bottom:30px}
 .testimonial .grid-sizer,.testimonial .grid-item{width:50%}

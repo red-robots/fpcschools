@@ -737,6 +737,9 @@ body.scroll-up {
             width: 80%;
         }
     }
+    &.logged-in #interiornav {
+        top: 107px;
+    }
 }
 
 body.wds .testimonial-post .pad {
