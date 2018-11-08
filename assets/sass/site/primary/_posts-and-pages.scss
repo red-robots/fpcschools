@@ -786,8 +786,16 @@ body.cdc .testimonial-post .pad {
         .name {
             font-family: $font-heading;
             font-size: 20px;
-            margin: 0 0;
+            margin: 0 0 15px;
         }
+        .copy p {
+            margin-top: 1.3em;
+            margin-bottom: 0;
+        }
+        .copy p:first-child {
+            margin-top: 0;
+        }
+        
     }
 }
 

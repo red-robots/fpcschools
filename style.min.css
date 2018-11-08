@@ -2042,7 +2042,9 @@ body.cdc .testimonial-post .pad{background:#198bbd}
 }.testimonial-list .testimonial-post .inner{padding-left:10px;padding-right:10px}
 @media screen and (min-width:780px){.testimonial-list .testimonial-post .inner{padding-left:15px;padding-right:15px}
 }.testimonial-list .testimonial-post .pad{padding:20px;box-shadow:0 0 18px 0 rgba(0,0,0,0.34)}
-.testimonial-list .testimonial-post .name{font-family:"Delius",cursive;font-size:20px;margin:0}
+.testimonial-list .testimonial-post .name{font-family:"Delius",cursive;font-size:20px;margin:0 0 15px}
+.testimonial-list .testimonial-post .copy p{margin-top:1.3em;margin-bottom:0}
+.testimonial-list .testimonial-post .copy p:first-child{margin-top:0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
