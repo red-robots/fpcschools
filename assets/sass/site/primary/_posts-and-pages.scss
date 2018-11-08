@@ -873,6 +873,15 @@ body.cdc .testimonial-post .pad {
         padding-top: 0;
         padding-bottom: 0;
     }
+    .textwrap table.striped {
+        border-bottom: 5px solid #f3f5f5;
+    }
+    .textwrap table.striped td {
+        padding:7px 10px;
+    }
+    .textwrap table.striped tr:nth-child(odd) td {
+        background-color: #f3f5f5;
+    }
 }
 body.cdc  .interior.entry {
      gform_wrapper .gform_footer input.button, 

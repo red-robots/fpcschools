@@ -2059,6 +2059,9 @@ body.cdc .testimonial-post .pad{background:#198bbd}
 .interior.entry .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){width:100%}
 .interior.entry .gform_wrapper .gform_footer input.button,.interior.entry .gform_wrapper .gform_footer input[type=submit]{color:#FFF;border:0;-webkit-appearance:none;box-shadow:none;width:110px;height:38px;line-height:38px;padding:0;text-shadow:none}
 .interior.entry .gform_footer{margin-top:0;padding-top:0;padding-bottom:0}
+.interior.entry .textwrap table.striped{border-bottom:5px solid #f3f5f5}
+.interior.entry .textwrap table.striped td{padding:7px 10px}
+.interior.entry .textwrap table.striped tr:nth-child(odd) td{background-color:#f3f5f5}
 body.cdc .interior.entry gform_wrapper .gform_footer input.button,body.cdc .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#198bbd}
 body.wds .interior.entry gform_wrapper .gform_footer input.button,body.wds .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#7abb69}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
