@@ -13,6 +13,8 @@ $page_title = get_the_title($post_id);
 
 if($school_type) {
     get_template_part( 'header_subsite');
+    get_template_part( 'inc/banner_subsite');
+    
     $args = array(
         'post_type'         => array('testimonial'),
         'posts_per_page'    => -1,
@@ -28,6 +30,7 @@ if($school_type) {
         )
     );
     $testimonials = new WP_Query($args);
+
 ?>
 
 <div id="primary" class="content-area full clear">
