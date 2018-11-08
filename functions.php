@@ -105,3 +105,36 @@ function get_school_type_uri($type=null) {
         return end($arrs);
     }
 }
+
+/* shortcode to wrap content in a div */
+function do_shortcode_contact_information($atts, $content = null) {
+    extract(shortcode_atts(array(
+      'post_id' => "",
+      'class' => "",
+    ), $atts));
+    
+    $output = '';
+    if($post_id) {
+        $details = get_field('contact_sections',$post_id);
+        $count = count($details);
+        $colClass = '';
+        if($count==2) {
+            $colClass = ' cols_2 padded';
+        }
+        else if($count==3) {
+            $colClass = ' cols_3 padded';
+        }
+        else if($count>3) {
+            $colClass = ' cols_4 padded';
+        }
+        if($details) {
+            $output = '<div class="contact_data '.$class.'"><div class="row clear">';
+            foreach($details as $d) {
+                $output .= '<div class="text'.$colClass.'"><div class="pad clear">'.$d['contact_section_text'].'</div></div>';
+            }
+            $output .= '</div></div>';
+        }
+    }
+    return $output;
+}
+add_shortcode('contact_information', 'do_shortcode_contact_information');

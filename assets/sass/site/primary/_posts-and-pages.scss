@@ -896,3 +896,144 @@ body.wds  .interior.entry {
         background-color:$color-wds;
     }
 }
+.hentry {
+    .entry-header {
+        margin-top: 1em;
+        margin-bottom:2em;
+    }
+    .entry-title {
+        font-family: $font-heading;
+        font-weight: 400;
+        font-size: 35px;
+        margin: 0 0;
+    }
+}
+
+.contact_data {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .text p {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
+    h3 {
+        margin-bottom: .8em;
+    }
+    @media screen and (min-width: $tabwidth) {
+        .text.cols_2 {
+            width: 50%;
+            float: left;
+        }
+        .text.cols_3 {
+            width: 33.333333%;
+            float: left;
+        }
+        .text.cols_4 {
+            width: 25%;
+            float: left;
+        }
+        .text.padded .pad {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+.contact-form-wrapper {
+    width: 100%;
+    @media screen and (min-width: $tabwidth) {
+        width: 60%;
+    }
+    .gform_wrapper ul li.gfield {
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        float: left;
+    }
+    .gform_wrapper ul li.gfield.address {
+        label {
+            width: 100%;
+            float: left;
+            position: relative;
+            margin-bottom: 0;
+        }
+        .ginput_container span label {
+            top: 5px;
+            margin-bottom: 15px;
+        }
+        .ginput_container span {
+            display: block;
+            margin-bottom: 10px;
+            width: 50%;
+            float: left;
+            &.address_line_1,
+            &.select2,
+            &.selection,
+            &.dropdown-wrapper,
+            &.select2-selection__rendered {
+                width: 100%;
+                margin-bottom: 0;
+                position: relative;
+            }
+            &.select2-selection {
+                margin-bottom: 0;
+                height: 36px;
+                line-height: 36px;
+                width: 100%;
+            }
+            &.select2-selection__arrow {
+                width: 20px;
+                margin-bottom: 0;
+                top: 6px;
+                right: 5px;
+            }
+            &.select2-selection__rendered {
+                top:3px;
+            }
+            &.address_city,
+            &.address_state,
+            &.address_zip {
+                width: 100%;
+                @media screen and (min-width: $tabwidth) {
+                    width: 50%;
+                }
+            }
+        }
+        .select2-container--default .select2-selection--single {
+            border: 1px solid #ccc;
+        }
+    }
+    
+    .gform_wrapper ul li.gfield.wraphalf {
+        width: 100%;
+        float: left;
+        clear: none;
+        @media screen and (min-width: $tabwidth) {
+            width: 50%;
+            height: 100px;
+        }
+    }
+    .gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+        margin-top: 0;
+        position: relative;
+        top: 0px;
+        margin-right: 5px;
+    }
+    .gform_wrapper .top_label input.medium.datepicker {
+        width: 100%;
+        float: left;
+    }
+    .gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit]  {
+        -webki-appearance:none;
+        background: $color-orange;
+        box-shadow: none;
+        border-radius: 5px;
+        background: #dd731d;
+        color: #FFF;
+        border: none;
+        padding: 12px 34px;
+        text-shadow: none;
+        font-size: 20px;
+    }
+}

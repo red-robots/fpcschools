@@ -156,6 +156,10 @@ jQuery(document).ready(function ($) {
       }
     });
     
+    $('.address_state select').select2({
+        placeholder: 'Select a State',
+        selectOnClose: true
+    });
 	/*
 	*
 	*	Wow Animation
