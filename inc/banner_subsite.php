@@ -8,7 +8,7 @@ if($school_type) {
     $banner = get_field('banner_image',$post_id); 
     $img_src = ($banner) ? $banner['url'] : '';
     if($img_src) { ?>
-    <div class="slides-wrapper full clear">
+    <div class="slides-wrapper full clear animated fadeIn">
         <ul class="slides">
             <li class="slide">
                 <img src="<?php echo $img_src;?>" alt="<?php echo $banner['title'];?>" />

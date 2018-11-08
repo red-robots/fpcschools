@@ -11,7 +11,7 @@ $slides = new WP_Query($args);
 ?>
 
 <?php if ( $slides->have_posts() ) { ?>
-<div class="slides-wrapper full clear <?php echo ($slideTotal>1) ? 'flexslider':'no-slideshow';?>">
+<div class="slides-wrapper full clear animated fadeIn <?php echo ($slideTotal>1) ? 'flexslider':'no-slideshow';?>">
     <ul class="slides">
     <?php while ( $slides->have_posts() ) : $slides->the_post();  
         $post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
