@@ -2028,7 +2028,22 @@ body.scroll-up.wds .logo{width:20%}
 body.scroll-up.cdc .logo{width:13%}
 body.scroll-up.cdc .main-navigation,body.scroll-up.wds .main-navigation{width:100%}
 @media screen and (min-width:780px){body.scroll-up.cdc .main-navigation,body.scroll-up.wds .main-navigation{width:80%}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}body.wds .testimonial-post .pad{background:#7abb69}
+body.cdc .testimonial-post .pad{background:#198bbd}
+.testimonial .section-title-wrap{margin-bottom:30px;text-align:left}
+.testimonial .grid-sizer,.testimonial .grid-item{width:50%}
+.testimonial .grid-item--width2{width:50%}
+@media screen and (min-width:780px){.testimonial .grid-sizer,.testimonial .grid-item{width:33.33333%}
+.testimonial .grid-item--width2{width:33.33333%}
+}.testimonial-list{margin-left:-10px;margin-right:-10px}
+@media screen and (min-width:780px){.testimonial-list{margin-left:-15px;margin-right:-15px}
+}.testimonial-list .testimonial-post{margin-bottom:20px;float:left;color:#FFF}
+@media screen and (min-width:780px){.testimonial-list .testimonial-post{margin-bottom:30px}
+}.testimonial-list .testimonial-post .inner{padding-left:10px;padding-right:10px}
+@media screen and (min-width:780px){.testimonial-list .testimonial-post .inner{padding-left:15px;padding-right:15px}
+}.testimonial-list .testimonial-post .pad{padding:20px;box-shadow:0 0 18px 0 rgba(0,0,0,0.34)}
+.testimonial-list .testimonial-post .name{font-family:"Delius",cursive;font-size:20px;margin:0}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

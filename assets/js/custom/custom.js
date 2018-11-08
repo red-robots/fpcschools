@@ -146,6 +146,14 @@ jQuery(document).ready(function ($) {
         $('#interiornav').toggleClass('nav-open');
     });
     
+    
+    var $grid = $('.grid').isotope({
+      itemSelector: '.grid-item',
+      masonry: {
+        columnWidth: '.grid-sizer'
+      }
+    });
+    
 	/*
 	*
 	*	Wow Animation
