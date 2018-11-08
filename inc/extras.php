@@ -102,7 +102,7 @@ function generate_sitemap() {
     global $wpdb;
     $lists = array();
     $menus = wp_get_nav_menu_items('main-menu');
-    $news_ID = 112;
+    //$news_ID = 112;
     $cat_args = array('hide_empty' => 1, 'parent' => 0);
     $menu_orders = array();
     $menu_with_children = array();
@@ -193,13 +193,10 @@ function generate_sitemap() {
                     $lists[$id]['children'] = $c_obj;
                 }
             }
-
-
-
             
-            if($id == $news_ID) {
-                $lists[$id]['categories'] = get_categories($cat_args);
-            }
+            // if($id == $news_ID) {
+            //     $lists[$id]['categories'] = get_categories($cat_args);
+            // }
         }
     }
     
