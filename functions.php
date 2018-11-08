@@ -69,6 +69,12 @@ require get_template_directory() . '/inc/block-all-registration-and-comments.php
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/* Fixed Gravity Form Conflict Js */
+add_filter("gform_init_scripts_footer", "init_scripts");
+function init_scripts() {
+    return true;
+}
+
 function get_post_id_by_slug($slug) {
     global $wpdb;
     $row = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}posts WHERE post_name='".$slug."' AND post_status='publish'", OBJECT );

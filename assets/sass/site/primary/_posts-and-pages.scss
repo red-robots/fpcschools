@@ -800,4 +800,90 @@ body.cdc .testimonial-post .pad {
     }
 }
 
+.interior.entry {
+    .gform_wrapper {
+        margin-bottom: 60px;
+        @media screen and (min-width: $tabwidth) {
+            margin-bottom: 20px;
+        }
+    }
+    .gform_wrapper ul.gform_fields li.gfield {
+        width: 100%;
+        float: left;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .textwrap ul.gform_fields {
+        margin-left: -16px!important;
+    }
+    
+    .gform_wrapper ul.gform_fields li.gfield.fullname {
+        .ginput_container {
+            width: 100%;
+            float: left;
+        }
+        span {
+            display: block;
+            width: 50%;
+            float: left;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
+            position: relative;
+            &.name_first {
+                left: -15px;
+                padding-right: 0;
+            }
+            &.name_last {
+                padding-right: 0;
+                padding-left: 0;
+                @media screen and (min-width: $tabwidth) {
+                    right:-5px;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+    
+    .gform_wrapper ul.gform_fields li.gfield.tour_date, 
+    .gform_wrapper ul.gform_fields li.gfield.phone_field,
+    .gform_wrapper ul.gform_fields li.gfield.email_field {
+        width: 50%;
+        clear: none;
+    }
+    .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+        width: 100%;
+    }
+    .gform_wrapper .gform_footer input.button, 
+    .gform_wrapper .gform_footer input[type=submit] {
+        color: #FFF;
+        border: none;
+        -webkit-appearance: none;
+        box-shadow: none;
+        width: 110px;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 0;
+        text-shadow: none;
+    }
+    .gform_footer {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+body.cdc  .interior.entry {
+     gform_wrapper .gform_footer input.button, 
+    .gform_wrapper .gform_footer input[type=submit] {
+        background-color:$color-cdc;
+    }
+}
 
+body.wds  .interior.entry {
+     gform_wrapper .gform_footer input.button, 
+    .gform_wrapper .gform_footer input[type=submit] {
+        background-color:$color-wds;
+    }
+}

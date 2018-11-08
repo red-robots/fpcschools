@@ -10,19 +10,21 @@ $anchors = array();
 if($sections) {
     foreach($sections as $ss) {
         $title = $ss['menu_title'];
-        $slug = sanitize_title_with_dashes($title);
-        $anchors[] = array($slug,$title);
+        if($title) {
+            $slug = sanitize_title_with_dashes($title);
+            $links[] = array($slug,$title);
+        }
     }
-
 ?>
-<?php if($anchors) { ?>
+<?php if( $links ) { ?>
 <div id="interiornav" class="interior-navigation">
     <span id="subnavMobile"><span><i class="fa fa-chevron-down"></i></span></span>
     <div id="navActiveCon" class="wrapper clear"><span class="active-area"></span></div>
     
     <nav id="int_menu" class="wrapper navwrap">
          <ul class="intnav">
-            <?php $i=1; foreach($anchors as $menu) { 
+            <?php                   
+            $i=1; foreach($links as $menu) { 
                 $href = $menu[0];
                 $menu_name = $menu[1];
             ?>

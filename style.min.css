@@ -2046,6 +2046,21 @@ body.cdc .testimonial-post .pad{background:#198bbd}
 .testimonial-list .testimonial-post .name{font-family:"Delius",cursive;font-size:20px;margin:0 0 15px}
 .testimonial-list .testimonial-post .copy p{margin-top:1.3em;margin-bottom:0}
 .testimonial-list .testimonial-post .copy p:first-child{margin-top:0}
+.interior.entry .gform_wrapper{margin-bottom:60px}
+@media screen and (min-width:780px){.interior.entry .gform_wrapper{margin-bottom:20px}
+}.interior.entry .gform_wrapper ul.gform_fields li.gfield{width:100%;float:left;padding-top:0;padding-bottom:0;margin-top:0;margin-bottom:20px}
+.interior.entry .textwrap ul.gform_fields{margin-left:-16px !important}
+.interior.entry .gform_wrapper ul.gform_fields li.gfield.fullname .ginput_container{width:100%;float:left}
+.interior.entry .gform_wrapper ul.gform_fields li.gfield.fullname span{display:block;width:50%;float:left;padding-left:15px;padding-right:15px;box-sizing:border-box;position:relative}
+.interior.entry .gform_wrapper ul.gform_fields li.gfield.fullname span.name_first{left:-15px;padding-right:0}
+.interior.entry .gform_wrapper ul.gform_fields li.gfield.fullname span.name_last{padding-right:0;padding-left:0}
+@media screen and (min-width:780px){.interior.entry .gform_wrapper ul.gform_fields li.gfield.fullname span.name_last{right:-5px;padding-left:15px}
+}.interior.entry .gform_wrapper ul.gform_fields li.gfield.tour_date,.interior.entry .gform_wrapper ul.gform_fields li.gfield.phone_field,.interior.entry .gform_wrapper ul.gform_fields li.gfield.email_field{width:50%;clear:none}
+.interior.entry .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){width:100%}
+.interior.entry .gform_wrapper .gform_footer input.button,.interior.entry .gform_wrapper .gform_footer input[type=submit]{color:#FFF;border:0;-webkit-appearance:none;box-shadow:none;width:110px;height:38px;line-height:38px;padding:0;text-shadow:none}
+.interior.entry .gform_footer{margin-top:0;padding-top:0;padding-bottom:0}
+body.cdc .interior.entry gform_wrapper .gform_footer input.button,body.cdc .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#198bbd}
+body.wds .interior.entry gform_wrapper .gform_footer input.button,body.wds .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#7abb69}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
