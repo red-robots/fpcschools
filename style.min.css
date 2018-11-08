@@ -1739,7 +1739,7 @@ body.cdc .interior-navigation{background:#198bbd}
 .interior-navigation ul li:before{content:"";display:block;width:1px;height:16px;background:#FFF;position:absolute;top:16px;left:0}
 .interior-navigation ul li.first:before{display:none}
 }.interior-navigation a{text-decoration:none;color:#FFF;display:block;padding:5px 15px 10px;outline:0;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-.interior-navigation a:hover{opacity:.6}
+.interior-navigation a.active,.interior-navigation a:hover{opacity:.6}
 @media screen and (min-width:780px){.interior-navigation a{padding:13px 15px 13px}
 }#interiornav{position:relative}
 #subnavMobile{display:block;cursor:pointer;width:50px;height:50px;position:absolute;top:2px;right:10px;border-radius:4px;z-index:100002;outline:0}

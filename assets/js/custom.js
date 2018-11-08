@@ -110,6 +110,8 @@ jQuery(document).ready(function ($) {
         if ( $('#interiornav').length> 0 ) {
             $('#interiornav').toggleClass('nav-open');
             $('.active-area').text( $(this).text() );
+            $('ul.intnav a').removeClass('active');
+            $(this).addClass('active');
         }
         
         
