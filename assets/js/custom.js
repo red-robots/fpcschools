@@ -77,12 +77,23 @@ jQuery(document).ready(function ($) {
             if ( $(this).scrollTop() > 100 ) {
                 $('.scrollup').fadeIn();
                 $('body').addClass('scroll-up');
+                var height = 0;
+                if( $('#wpadminbar').length>0 ) {
+                    var barHeight = $('#wpadminbar').outerHeight();
+                    height += parseInt(barHeight);
+                }
+                var mHeight = $("#masthead").outerHeight();
+                height += parseInt(mHeight);
+                var height_px = height + 'px';
+                $("#interiornav").css('top',height_px);
+                
             } else {
                 $('.scrollup').fadeOut();
                 $('body').removeClass('scroll-up');
                 if(times_clicked>0) {
                     times_clicked = 0;
                 }
+                $("#interiornav").css('top',0);
             }
         }); 
     }
@@ -164,6 +175,7 @@ jQuery(document).ready(function ($) {
         placeholder: 'Select a State',
         selectOnClose: true
     });
+
 	/*
 	*
 	*	Wow Animation

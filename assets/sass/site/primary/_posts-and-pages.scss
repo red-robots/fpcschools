@@ -107,7 +107,7 @@
 
 .slides-wrapper {
     position: relative;
-    margin: 0 0;
+    margin: 0 0 0;
     padding: 0 0;
     border:none;
     max-height: 470px;
@@ -493,12 +493,6 @@
     }
 }
 
-.site-footer {
-    background: $color-orange;
-    height: 60px;
-    margin-top: 20px;
-}
-
 .error-404 {
     margin-top: 40px;
     text-align: center;
@@ -536,8 +530,14 @@
     }
 }
 
+body.wds .section.pattern-blue {
+    background-image:url('images/bg-wds.png');
+}
+body.cdc .section.pattern-blue {
+    background-image:url('images/bg-cdc.png');
+}
+
 .section.pattern-blue {
-    background-image:url('images/school_pattern.png');
     background-position: center center;
     background-repeat: repeat;
     background-color:$color-light-blue;
@@ -618,6 +618,14 @@
     }
 }
 
+body.wds .sbox_title .title a,
+body.wds .sbox_title .title {
+    color:#FFF;
+}
+body.cdc .sbox_title .title a,
+body.cdc .sbox_title .title {
+    color:$color-cdc;
+}
 .interior-info.wrapper {
     padding-bottom: 50px;
     position: relative;
@@ -725,10 +733,10 @@ body.scroll-up {
         z-index: 100;
     }
     &.wds .logo {
-        width: 20%;
+        width: 18%;
     }
     &.cdc .logo {
-        width: 13%;
+        width: 20%;
     }
     &.cdc .main-navigation,
     &.wds .main-navigation {
@@ -901,7 +909,7 @@ body.wds  .interior.entry {
 }
 .hentry {
     .entry-header {
-        margin-top: 1em;
+        margin-top:2em;
         margin-bottom:2em;
     }
     .entry-title {
@@ -1127,6 +1135,56 @@ body.wds  .interior.entry {
                     display: none;
                 }
             }
+        }
+    }
+}
+
+body.cdc {
+    .interior.entry .title,
+    .page-title,
+    .titlewrap.ss_titlediv .section-title {
+        color:$color-cdc-green;
+    }
+}
+
+.footwidget {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .widget-title {
+        display: none;
+    }
+    .widget_media_image a {
+        display: block;
+        width: 215px;
+        float: left;
+        position: relative;
+        top:3px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .widget {
+        width: 100%;
+        float: left;
+        margin-bottom: 0;
+        @media screen and (min-width: $tabwidth) {
+            width: 50%;
+        }
+    }
+    .widget_text .textwidget {
+        text-align: right;
+        p {
+            margin: 0 0;
+            padding: 0 0;
+            color: #FFF;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 600;
         }
     }
 }

@@ -28,6 +28,30 @@ function fpcschools_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'fpcschools_body_classes' );
 
+/* Widgets */
+function aa_register_sidebars(){
+    register_sidebar( array (
+		'name' => "WDS Footer",
+		'id' => 'footer-wds',
+		'description' => __( 'Display elements in the footer section.'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<span class="widget-title">',
+		'after_title' => '</span>',
+	) );
+    register_sidebar( array (
+		'name' => "CDC Footer",
+		'id' => 'footer-cdc',
+		'description' => __( 'Display elements in the footer section.'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<span class="widget-title">',
+		'after_title' => '</span>',
+	) );
+}
+add_action( 'widgets_init', 'aa_register_sidebars' );
+
+
 /* Fixed Gravity Form Conflict Js */
 add_filter("gform_init_scripts_footer", "init_scripts");
 function init_scripts() {
@@ -203,4 +227,3 @@ function generate_sitemap() {
     return $lists;
     
 }
-

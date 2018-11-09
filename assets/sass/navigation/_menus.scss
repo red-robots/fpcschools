@@ -351,11 +351,11 @@ body.wds .main-navigation {
 
 body.cdc .main-navigation {
     a {
-        color: $color-light-blue;
+        color: $color-cdc-green;
     }
     
     a:hover {
-        color: $color-green;
+        color: $color-cdc-blue;
     }
     
     .current_page_item > a,
@@ -367,7 +367,7 @@ body.cdc .main-navigation {
     }
    
     @media screen and (min-width: $tabwidth) {
-        width: 80%;
+        width: 70%;
         ul.menu {
             text-align: right;
         }

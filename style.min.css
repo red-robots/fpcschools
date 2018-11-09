@@ -1716,14 +1716,14 @@ body.wds .main-navigation .current_page_item>a,body.wds .main-navigation .curren
 @media screen and (min-width:780px){body.wds .main-navigation{width:70%}
 body.wds .main-navigation ul.menu{text-align:right}
 body.wds .main-navigation ul.menu>li{display:inline-block;float:none;margin-bottom:3px}
-}body.cdc .main-navigation a{color:#198bbd}
-body.cdc .main-navigation a:hover{color:#7abb69}
-body.cdc .main-navigation .current_page_item>a,body.cdc .main-navigation .current-menu-item>a,body.cdc .main-navigation .current_page_ancestor>a,body.cdc .main-navigation .current-menu-ancestor>a{background:#198bbd;color:#FFF}
-@media screen and (min-width:780px){body.cdc .main-navigation{width:80%}
+}body.cdc .main-navigation a{color:#86c579}
+body.cdc .main-navigation a:hover{color:#325599}
+body.cdc .main-navigation .current_page_item>a,body.cdc .main-navigation .current-menu-item>a,body.cdc .main-navigation .current_page_ancestor>a,body.cdc .main-navigation .current-menu-ancestor>a{background:#325599;color:#FFF}
+@media screen and (min-width:780px){body.cdc .main-navigation{width:70%}
 body.cdc .main-navigation ul.menu{text-align:right}
 body.cdc .main-navigation ul.menu>li{display:inline-block;float:none;margin-bottom:3px}
 }body.wds .interior-navigation{background:#7abb69}
-body.cdc .interior-navigation{background:#198bbd}
+body.cdc .interior-navigation{background:#325599}
 .interior-navigation{text-align:center}
 .interior-navigation .navwrap{height:0;overflow:hidden;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 @media screen and (min-width:780px){.interior-navigation .navwrap{height:auto;overflow:visible}
@@ -1950,7 +1950,8 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .wrapper{width:100%;margin:0 auto;padding:0 30px}
 @media screen and (min-width:780px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{max-width:1300px;padding:0 40px}
-}.content-area{width:100%;margin:0 auto;min-height:20em}
+}.site-footer .wrapper{padding:15px 0}
+.content-area{width:100%;margin:0 auto;min-height:20em}
 @media screen and (min-width:780px){.content-area{width:66%;float:left;margin:0;min-height:30em}
 }@media screen and (min-width:1200px){}
 .full{max-width:100%;width:100%}
@@ -1970,16 +1971,19 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 @media screen and (min-width:780px){#masthead{height:auto}
 }#masthead .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding-top:10px;padding-bottom:10px}
 @media screen and (min-width:780px){#masthead .wrapper{padding-top:25px;padding-bottom:25px}
+}@media screen and (min-width:780px){body.wds #masthead .wrapper{padding-top:18px;padding-bottom:18px}
 }body{font-family:"Source Sans Pro",sans-serif;color:#05264d;font-size:16px;line-height:1.3}
 body.cdc .logo,body.wds .logo{display:block;text-align:left}
 @media screen and (min-width:780px){body.cdc .logo,body.wds .logo{width:30%}
 body.cdc .logo a,body.wds .logo a{display:inline-block;width:90%;float:left}
 }body.cdc #masthead .wrapper{padding-top:10px;padding-bottom:10px}
-body.cdc .logo{position:absolute;top:0;left:20px;width:170px}
-@media screen and (min-width:780px){body.cdc .logo{width:20%;position:relative;left:0}
-}body.cdc .logo a{width:40%}
-body.wds .site-footer{margin-top:0;background:#7abb69}
-body.cdc .site-footer{margin-top:0;background:#198bbd}
+body.cdc .logo{position:absolute;top:0;left:20px;width:100%}
+@media screen and (min-width:780px){body.cdc .logo{width:30%;position:relative;left:0}
+}body.cdc .logo a{width:200px;top:5px;position:relative}
+@media screen and (min-width:780px){body.cdc .logo a{width:300px;top:0}
+}@media screen and (min-width:780px){body.cdc.scroll-up .logo a{width:74%}
+}body.wds .site-footer{margin-top:0;background:#7abb69}
+body.cdc .site-footer{margin-top:0;background:#325599}
 .scrollup{display:none;width:50px;height:50px;border-radius:100px;background:rgba(0,0,0,0.5);color:#FFF;position:fixed;bottom:20px;right:20px;text-align:center;text-decoration:none;outline:0;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .scrollup span{font-size:22px;position:relative;top:10px;opacity:.8}
 .scrollup:active,.scrollup:focus{outline:0}
@@ -2082,15 +2086,16 @@ body.cdc .site-footer{margin-top:0;background:#198bbd}
 .section.section4 .bottom-title span{color:#05264d}
 .section.section4 .columns-wrapper{position:relative;background-image:url("images/wave.png");background-repeat:no-repeat;background-position:center center}
 @media screen and (min-width:780px){.section.section4 .columns-wrapper{background-position:center 40%}
-}.site-footer{background:#dd731d;height:60px;margin-top:20px}
-.error-404{margin-top:40px;text-align:center}
+}.error-404{margin-top:40px;text-align:center}
 .error-404 h1{margin:0 0 10px;font-family:"Delius",cursive;font-size:30px}
 .error-404 p{margin-top:0;margin-bottom:1.5em}
 .titlewrap.ss_titlediv .section-title{margin-top:0;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;text-align:left;color:#198bbd}
 @media screen and (min-width:780px){.titlewrap.ss_titlediv .section-title{position:relative;top:-4px}
 }@media screen and (min-width:780px){.text-column.ss_textcolumn{width:58%}
 }@media screen and (min-width:780px){.image-column.ss_image_column{width:38%}
-}.section.pattern-blue{background-image:url("images/school_pattern.png");background-position:center center;background-repeat:repeat;background-color:#198bbd;background-size:200%;color:#FFF}
+}body.wds .section.pattern-blue{background-image:url("images/bg-wds.png")}
+body.cdc .section.pattern-blue{background-image:url("images/bg-cdc.png")}
+.section.pattern-blue{background-position:center center;background-repeat:repeat;background-color:#198bbd;background-size:200%;color:#FFF}
 @media screen and (min-width:780px){.section.pattern-blue{background-size:100%}
 }.section.pattern-blue .section-title{color:#FFF;text-align:center;text-transform:none;font-size:30px}
 .section.pattern-blue .textwrap .row{margin-left:-10px;margin-right:-10px}
@@ -2107,6 +2112,8 @@ body.cdc .site-footer{margin-top:0;background:#198bbd}
 .section.pattern-blue .sbox_title .title{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 .section.pattern-blue .sbox_title .title i{display:inline-block;border-bottom:1px solid #FFF}
 .section.pattern-blue .sbox_title a{text-decoration:none;color:#FFF}
+body.wds .sbox_title .title a,body.wds .sbox_title .title{color:#FFF}
+body.cdc .sbox_title .title a,body.cdc .sbox_title .title{color:#325599}
 .interior-info.wrapper{padding-bottom:50px;position:relative}
 .section-title-wrap{text-align:center;padding-top:40px;padding-bottom:0}
 .page-title{margin:0;padding:0;text-transform:uppercase;color:#198bbd;font-family:"Delius",cursive;font-weight:500;font-size:35px}
@@ -2128,13 +2135,13 @@ body.scroll-up #masthead,body.scroll-up #interiornav{position:fixed;width:100%;l
 body.scroll-up #masthead{height:77px}
 body.scroll-up #masthead .wrapper{padding-top:10px;padding-bottom:10px}
 body.scroll-up #interiornav{top:77px;z-index:100}
-body.scroll-up.wds .logo{width:20%}
-body.scroll-up.cdc .logo{width:13%}
+body.scroll-up.wds .logo{width:18%}
+body.scroll-up.cdc .logo{width:20%}
 body.scroll-up.cdc .main-navigation,body.scroll-up.wds .main-navigation{width:100%}
 @media screen and (min-width:780px){body.scroll-up.cdc .main-navigation,body.scroll-up.wds .main-navigation{width:80%}
 }body.scroll-up.logged-in #interiornav{top:107px}
 body.wds .testimonial-post .pad{background:#7abb69}
-body.cdc .testimonial-post .pad{background:#198bbd}
+body.cdc .testimonial-post .pad{background:#325599}
 .testimonial .section-title-wrap{margin-bottom:30px}
 .testimonial .grid-sizer,.testimonial .grid-item{width:50%}
 .testimonial .grid-item--width2{width:50%}
@@ -2166,9 +2173,9 @@ body.cdc .testimonial-post .pad{background:#198bbd}
 .interior.entry .textwrap table.striped{border-bottom:5px solid #f3f5f5}
 .interior.entry .textwrap table.striped td{padding:7px 10px}
 .interior.entry .textwrap table.striped tr:nth-child(odd) td{background-color:#f3f5f5}
-body.cdc .interior.entry gform_wrapper .gform_footer input.button,body.cdc .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#198bbd}
+body.cdc .interior.entry gform_wrapper .gform_footer input.button,body.cdc .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#325599}
 body.wds .interior.entry gform_wrapper .gform_footer input.button,body.wds .interior.entry .gform_wrapper .gform_footer input[type=submit]{background-color:#7abb69}
-.hentry .entry-header{margin-top:1em;margin-bottom:2em}
+.hentry .entry-header{margin-top:2em;margin-bottom:2em}
 .hentry .entry-title{font-family:"Delius",cursive;font-weight:400;font-size:35px;margin:0}
 .contact_data .row{margin-left:-15px;margin-right:-15px}
 .contact_data .text p{margin-top:0;margin-bottom:1.5em}
@@ -2213,6 +2220,15 @@ body.wds .interior.entry gform_wrapper .gform_footer input.button,body.wds .inte
 .menu-footer-menu-container ul li:first-child{margin-left:0}
 .menu-footer-menu-container ul li:first-child a{padding-left:0}
 .menu-footer-menu-container ul li:first-child a:before{display:none}
+body.cdc .interior.entry .title,body.cdc .page-title,body.cdc .titlewrap.ss_titlediv .section-title{color:#86c579}
+.footwidget{width:100%;float:left;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.footwidget .widget-title{display:none}
+.footwidget .widget_media_image a{display:block;width:215px;float:left;position:relative;top:3px}
+.footwidget .widget_media_image a img{width:100%;height:auto}
+.footwidget .widget{width:100%;float:left;margin-bottom:0}
+@media screen and (min-width:780px){.footwidget .widget{width:50%}
+}.footwidget .widget_text .textwidget{text-align:right}
+.footwidget .widget_text .textwidget p{margin:0;padding:0;color:#FFF;letter-spacing:2px;font-size:14px;font-weight:600}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

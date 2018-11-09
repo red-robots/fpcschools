@@ -8,14 +8,27 @@
  *
  * @package fpcschools
  */
-
+$school_type = get_school_type_uri('key');
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper">
-			<?php wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_id' => 'footer-menu' ) ); ?> 
+	<footer id="colophon" class="site-footer clear" role="contentinfo">
+		<div class="wrapper clear">
+            <?php if($school_type=='wds') { ?>
+                <?php if ( is_active_sidebar( 'footer-wds' ) ) { ?>
+                <div class="footwidget">
+                    <?php dynamic_sidebar( 'footer-wds' ); ?>
+                </div>    
+                <?php } ?>
+            <?php } ?>
+            <?php if($school_type=='cdc') { ?>
+                <?php if ( is_active_sidebar( 'footer-cdc' ) ) { ?>
+                <div class="footwidget">
+                    <?php dynamic_sidebar( 'footer-cdc' ); ?>
+                </div>    
+                <?php } ?>
+            <?php } ?>
 	   </div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
