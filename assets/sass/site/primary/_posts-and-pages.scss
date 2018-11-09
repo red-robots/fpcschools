@@ -953,6 +953,7 @@ body.wds  .interior.entry {
 }
 .contact-form-wrapper {
     width: 100%;
+    margin-bottom: 50px;
     @media screen and (min-width: $tabwidth) {
         width: 60%;
     }

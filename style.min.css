@@ -2185,7 +2185,7 @@ body.wds .interior.entry gform_wrapper .gform_footer input.button,body.wds .inte
 .contact_data .text.cols_3{width:33.333333%;float:left}
 .contact_data .text.cols_4{width:25%;float:left}
 .contact_data .text.padded .pad{padding-left:20px;padding-right:20px}
-}.contact-form-wrapper{width:100%}
+}.contact-form-wrapper{width:100%;margin-bottom:50px}
 @media screen and (min-width:780px){.contact-form-wrapper{width:60%}
 }.contact-form-wrapper .gform_wrapper ul li.gfield{margin-top:0;margin-bottom:20px;width:100%;float:left}
 .contact-form-wrapper .gform_wrapper ul li.gfield.address label{width:100%;float:left;position:relative;margin-bottom:0}
