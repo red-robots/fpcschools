@@ -9,11 +9,11 @@
  * @package fpcschools
  */
 $school_type = get_school_type_uri('key');
-?>
-
+$is_school_page = ( $school_type=='wds' || $school_type=='cdc' ) ? true : false;
+$footer_class = ($is_school_page) ? 'school-footer':'main-footer'; ?>
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer clear" role="contentinfo">
+	<footer id="colophon" class="site-footer clear <?php echo $footer_class;?>" role="contentinfo">
 		<div class="wrapper clear">
             <?php if($school_type=='wds') { ?>
                 <?php if ( is_active_sidebar( 'footer-wds' ) ) { ?>

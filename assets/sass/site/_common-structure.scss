@@ -216,6 +216,10 @@ body.cdc .site-footer {
     margin-top: 0;
     background: $color-cdc;
 }
+.site-footer.main-footer {
+    background: $color-orange;
+    height: 65px;
+}
 
 .scrollup {
     display: none;
