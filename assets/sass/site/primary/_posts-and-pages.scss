@@ -661,6 +661,32 @@ body.cdc .sbox_title .title {
             margin-top: 0;
             margin-bottom: 1.5em;
         }
+        a {
+            color: $color-orange;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            transition: all ease-out 0.3s;
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                height: 1px;
+                background: $color-orange;
+                position: absolute;
+                margin: -1px auto 0;
+                visibility: hidden;
+                transition: all ease-out 0.2s;
+                transform: scaleX(0);
+            }
+            &:hover:after {
+                -webkit-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+                visibility: visible;
+            }
+        }
     }
     .textwrap.half {
         width: 100%;
@@ -807,7 +833,6 @@ body.cdc .testimonial-post .pad {
         .copy p:first-child {
             margin-top: 0;
         }
-        
     }
 }
 

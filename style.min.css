@@ -2122,6 +2122,9 @@ body.cdc .sbox_title .title a,body.cdc .sbox_title .title{color:#325599}
 .interior.entry .title{margin:0 0 15px;font-family:"Delius",cursive;font-weight:500;font-size:25px;text-transform:uppercase;color:#198bbd}
 .interior.entry .copy{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 .interior.entry .copy p{margin-top:0;margin-bottom:1.5em}
+.interior.entry .copy a{color:#dd731d;text-decoration:none;position:relative;display:inline-block;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.interior.entry .copy a:after{content:"";display:block;width:100%;margin:0 auto;height:1px;background:#dd731d;position:absolute;margin:-1px auto 0;visibility:hidden;-webkit-transition:all ease-out .2s;transition:all ease-out .2s;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0)}
+.interior.entry .copy a:hover:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);visibility:visible}
 .interior.entry .textwrap.half{width:100%;float:left}
 @media screen and (min-width:780px){.interior.entry .textwrap.half{width:62%}
 }.interior.entry .textwrap ul{margin:0 0 20px 20px;padding:0;list-style:none}
