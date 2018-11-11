@@ -176,6 +176,11 @@ jQuery(document).ready(function ($) {
         selectOnClose: true
     });
 
+    if( $(".footwidget .widget_media_image").length > 0 ) {
+       $(".footwidget .widget_media_image a").each(function(){
+          $(this).attr('target','_blank'); 
+       });
+    }
 	/*
 	*
 	*	Wow Animation

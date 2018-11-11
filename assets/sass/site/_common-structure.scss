@@ -121,6 +121,9 @@ div {
 .site-footer {
 	width: 100%;
 	clear: both;
+    box-sizing: border-box;
+    padding-left:20px;
+    padding-right:20px;
 }
 #masthead {
     position: relative;
