@@ -10,7 +10,6 @@ $is_sub_site_ii = get_school_type_uri();
 global $post, $wp_query;
 $post_id = (isset($post->ID)) ? $post->ID : 0;
 $page_title = get_the_title($post_id);
-get_headers();
 
 if($school_type) {
     get_template_part( 'header_subsite');
