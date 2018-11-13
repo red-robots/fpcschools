@@ -1947,7 +1947,7 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .clear{clear:both}
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
-p{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
+h1,h2,h3,h4,h5,h6,p,li{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 .wrapper{width:100%;margin:0 auto;padding:0 30px}
 @media screen and (min-width:780px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{max-width:1300px;padding:0 40px}
