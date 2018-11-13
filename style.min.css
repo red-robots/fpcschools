@@ -2007,7 +2007,7 @@ body.cdc .site-footer{margin-top:0;background:#325599}
 .plus-minus-toggle:after{-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center}
 .plus-minus-toggle.collapsed:after{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}
 .plus-minus-toggle.collapsed:before{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
-.slides-wrapper{position:relative;margin:0;padding:0;border:0;max-height:470px;overflow:hidden;background:#faeadd}
+.slides-wrapper{position:relative;margin:0;padding:0;border:0;overflow:hidden;background:#faeadd}
 .slides-wrapper ul.slides,.slides-wrapper ul.slides .slide{float:left;height:100%;width:100%;list-style:none;margin:0;padding:0}
 .slides-wrapper .slide{width:100%;position:relative;height:100%}
 .slides-wrapper .slide img{width:100%;height:auto;float:left}
