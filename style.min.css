@@ -1947,6 +1947,7 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .clear{clear:both}
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
+p{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 .wrapper{width:100%;margin:0 auto;padding:0 30px}
 @media screen and (min-width:780px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{max-width:1300px;padding:0 40px}
@@ -2025,6 +2026,7 @@ body.cdc .site-footer{margin-top:0;background:#325599}
 }.slides-wrapper .flex-control-nav{position:absolute;bottom:10px;left:0;width:100%;z-index:900}
 .slides-wrapper .flex-control-paging li a{background:rgba(255,255,255,0.45)}
 .slides-wrapper .flex-control-paging li a.flex-active{background:white}
+.text-column{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 .text-column.half,.image-column{width:100%;position:relative}
 @media screen and (min-width:780px){.text-column.half,.image-column{width:47%}
 }.text-column.half{float:left;margin-bottom:.5em}

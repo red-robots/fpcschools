@@ -199,7 +199,9 @@
     }
     
 }
-
+.text-column {
+    hyphens: none;
+}
 .text-column.half,
 .image-column {
     width: 100%;
