@@ -86,7 +86,8 @@ function ii_custom_taxonomies() {
                 'menu_name' => 'Schools',
                 'plural'    => 'Schools',
                 'single'    => 'School',
-                'taxonomy'  => 'schools'
+                'taxonomy'  => 'schools',
+                'show_admin_column'=> true
             ),
         );
     
@@ -97,7 +98,7 @@ function ii_custom_taxonomies() {
             $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post"; 
             $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
             $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
-            
+            $show_admin_column = ( isset($p['show_admin_column']) && $p['show_admin_column'] ) ? true : false;
             
             if( $taxonomy && $p_type ) {
                 $labels = array(
@@ -114,12 +115,15 @@ function ii_custom_taxonomies() {
                     'new_item_name' => __( 'New ' . $single_name ),
                   );
 
-              register_taxonomy($taxonomy,array($p_type), array(
+              register_taxonomy($taxonomy,$p_type, array(
                 'hierarchical' => true,
                 'labels' => $labels,
                 'show_ui' => true,
                 'query_var' => true,
                 'rewrite' => array( 'slug' => $taxonomy ),
+                'show_admin_column'=>$show_admin_column,
+                'public' => true,
+                '_builtin' => true
               ));
             }
             

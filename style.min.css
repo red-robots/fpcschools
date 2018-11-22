@@ -1942,12 +1942,12 @@ html[xmlns] .flexslider .slides{display:block}
 .select2-container--classic.select2-container--open .select2-dropdown{border-color:#5897fb}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
-*{-webkit-hyphens:none}
-div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
+*{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;-o-hyphens:none;hyphens:none}
+div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none}
 .clear{clear:both}
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
-h1,h2,h3,h4,h5,h6,p,li,a{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
+h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
 .wrapper{width:100%;margin:0 auto;padding:0 30px}
 @media screen and (min-width:780px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{max-width:1300px;padding:0 40px}
@@ -2026,7 +2026,7 @@ body.cdc .site-footer{margin-top:0;background:#325599}
 }.slides-wrapper .flex-control-nav{position:absolute;bottom:10px;left:0;width:100%;z-index:900}
 .slides-wrapper .flex-control-paging li a{background:rgba(255,255,255,0.45)}
 .slides-wrapper .flex-control-paging li a.flex-active{background:white}
-.text-column{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
+.text-column{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
 .text-column.half,.image-column{width:100%;position:relative}
 @media screen and (min-width:780px){.text-column.half,.image-column{width:47%}
 }.text-column.half{float:left;margin-bottom:.5em}
