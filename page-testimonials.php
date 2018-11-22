@@ -47,15 +47,21 @@ if($school_type) {
         <?php if ( $testimonials->have_posts() ) { ?>
         <div class="testimonial-list grid">
             <?php $i=1; while ( $testimonials->have_posts() ) : $testimonials->the_post();  
-                $seconds = $i;
+            $seconds = $i;
+            $postId = get_the_ID();
+            $post_thumbnail_id = get_post_thumbnail_id( $postId );
+            $img = wp_get_attachment_image_src($post_thumbnail_id,'large');
             ?>
             <div class="grid-sizer"></div>
             <div class="grid-item"></div>
             <div class="testimonial-post wow fadeIn grid-item grid-item--width2">
                 <div class="inner clear">
                     <div class="pad clear">
-                        <h4 class="name"><?php the_title();?></h4>
-                        <div class="copy"><?php the_content();?></div>
+                        <?php if($img) { ?>
+                        <div class="photo clear"><img src="<?php echo $img[0];?>" alt="" /></div>
+                        <?php } ?>
+                        <h4 class="name clear"><?php the_title();?></h4>
+                        <div class="copy clear"><?php the_content();?></div>
                     </div>
                 </div>
             </div>
